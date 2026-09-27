@@ -1488,7 +1488,6 @@ StringIndexMarisa::LoadEntries(storage::IndexEntryReader& reader,
                       (csr_num_keys_ + 1) * sizeof(uint32_t),
                       idx_bytes);
         }
-        auto csr_offsets_count = off_bytes / sizeof(uint32_t);
 
         if (config.contains(MMAP_FILE_PATH)) {
             // mmap path: stream csr_index + csr_offsets to disk, then mmap
